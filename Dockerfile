@@ -19,7 +19,7 @@ RUN groupdel dialout; \
 # Install persistent & runtime dependencies
 RUN set -eux; \
     apt-get update; \
-    apt-get install --no-install-recommends -y git netcat procps; \
+    apt-get install --no-install-recommends -y git netcat-traditional procps; \
     rm -rf /var/lib/apt/lists/*
 
 # Install media utilities
