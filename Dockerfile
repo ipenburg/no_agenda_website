@@ -25,9 +25,8 @@ RUN set -eux; \
 # Install media utilities
 RUN set -eux; \
     apt-get update; \
-    apt-get install --no-install-recommends -y ffmpeg mplayer; \
-    apt-get install -y python3-pip; \
-    pip install git+https://github.com/flutterfromscratch/audio-offset-finder.git; \
+    apt-get install --no-install-recommends -y ffmpeg mplayer pipx; \
+    pipx install git+https://github.com/flutterfromscratch/audio-offset-finder.git; \
     rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
